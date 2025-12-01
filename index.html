@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bengaluru Smart City Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="theme-toggle" class="theme-toggle" />
+    <div class="app">
+      <header class="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+          <div class="hero__top">
+            <div class="logo">Bengaluru Smart City Portal</div>
+            <label for="theme-toggle" class="theme-switch">
+              <span class="theme-switch__icon">☀</span>
+              <span class="theme-switch__track">
+                <span class="theme-switch__thumb"></span>
+              </span>
+              <span class="theme-switch__icon">🌙</span>
+            </label>
+          </div>
+          <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Metro</a>
+            <a href="#">Traffic</a>
+            <a href="#">Weather</a>
+            <a href="#">Alerts</a>
+          </nav>
+          <div class="hero__text">
+            <p class="eyebrow">Real-time city overview (demo)</p>
+            <h1>Welcome to Bengaluru Smart City Dashboard</h1>
+            <p>
+              Explore metro updates, traffic hotspots, power status and public
+              services in a single, clean interface inspired by India’s Silicon Valley.
+            </p>
+          </div>
+          <section class="micro-stats">
+            <article class="micro-card">
+              <span class="micro-card__label">Bengaluru Population</span>
+              <strong>1.4 Crore</strong>
+            </article>
+            <article class="micro-card">
+              <span class="micro-card__label">IT Companies</span>
+              <strong>12,000+</strong>
+            </article>
+            <article class="micro-card">
+              <span class="micro-card__label">Metro Lines</span>
+              <strong>2 (expanding)</strong>
+            </article>
+          </section>
+        </div>
+      </header>
+
+      <main class="dashboard">
+      <section class="panel weather">
+        <header>
+          <span>🌦 Weather</span>
+          <small>Updated 08:30 AM</small>
+        </header>
+        <div class="weather__content">
+          <div class="temp">27°C</div>
+          <div class="locations">
+            <p>MG Road · Clear skies</p>
+            <p>Whitefield · Light breeze</p>
+            <p>Koramangala · Humid</p>
+          </div>
+          <div class="icon sun"></div>
+        </div>
+      </section>
+
+      <section class="panel power">
+        <header>
+          <span>⚡ Power Outage Updates</span>
+          <small>Bescom feed (static)</small>
+        </header>
+        <p class="power__status power__status--ok">No planned outages today</p>
+        <p class="power__status power__status--warn">
+          <strong>JP Nagar</strong> · 2 PM – 4 PM · Planned maintenance
+        </p>
+      </section>
+
+      <section class="panel bus">
+        <header>
+          <span>🚌 BMTC Routes</span>
+          <small>Popular corridors (demo)</small>
+        </header>
+        <div class="bus__routes">
+          <article class="bus-card">
+            <h3>500D</h3>
+            <p>Kempegowda Bus Station → Hebbal → Whitefield</p>
+            <div class="bus-card__meta">
+              <span class="tag tag--high">Frequent</span>
+              <span class="eta">ETA: 10 min</span>
+            </div>
+          </article>
+          <article class="bus-card">
+            <h3>600</h3>
+            <p>Banashankari → JP Nagar → Electronic City</p>
+            <div class="bus-card__meta">
+              <span class="tag tag--med">Medium frequency</span>
+              <span class="eta">ETA: 18 min</span>
+            </div>
+          </article>
+          <article class="bus-card">
+            <h3>KIA-8</h3>
+            <p>Silk Board → Hebbal → Kempegowda Intl. Airport</p>
+            <div class="bus-card__meta">
+              <span class="tag tag--low">Low frequency</span>
+              <span class="eta">ETA: 32 min</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel metro">
+        <header>
+          <span>🚇 Metro Status</span>
+          <small>Next update in 5 min</small>
+        </header>
+        <ul>
+          <li>
+            <span class="line green"
+              ><span class="signal signal--green" aria-hidden="true"></span
+              >Green Line</span
+            >
+            <span class="status running">Running</span>
+            <span class="eta">Next train: 09:04</span>
+          </li>
+          <li>
+            <span class="line purple"
+              ><span class="signal signal--purple" aria-hidden="true"></span
+              >Purple Line</span
+            >
+            <span class="status ontime">On Time</span>
+            <span class="eta">Next train: 09:07</span>
+          </li>
+          <li>
+            <span class="line yellow"
+              ><span class="signal signal--yellow" aria-hidden="true"></span
+              >Airport Line</span
+            >
+            <span class="status delayed">Delayed</span>
+            <span class="eta">Next train: 09:15</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="panel traffic">
+        <header>
+          <span>🚦 Traffic Density</span>
+          <small>City command center</small>
+        </header>
+        <div class="traffic__grid">
+          <article>
+            <p>Silk Board</p>
+            <strong class="high">High</strong>
+          </article>
+          <article>
+            <p>KR Puram</p>
+            <strong class="medium">Medium</strong>
+          </article>
+          <article>
+            <p>Hebbal</p>
+            <strong class="low">Low</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel emergency">
+        <header>
+          <span>🏥 Emergency</span>
+          <small>Hotlines</small>
+        </header>
+        <ul>
+          <li><span>Hospital</span> <strong>104</strong></li>
+          <li><span>Police</span> <strong>100</strong></li>
+          <li><span>Fire</span> <strong>101</strong></li>
+        </ul>
+      </section>
+
+      <section class="panel systems">
+        <header>
+          <span>⚡ City Systems</span>
+          <small>Animated diagnostics</small>
+        </header>
+        <div class="loaders">
+          <article class="loading-bar" style="--progress: 82%">
+            <span>Energy Grid</span>
+            <div class="track"><span class="fill"></span></div>
+          </article>
+          <article class="loading-bar" style="--progress: 65%">
+            <span>Water Recycling</span>
+            <div class="track"><span class="fill"></span></div>
+          </article>
+          <article class="loading-bar" style="--progress: 92%">
+            <span>IoT Sensor Uptime</span>
+            <div class="track"><span class="fill"></span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel map">
+        <header>
+          <span>🗺 Smart Map</span>
+          <small>Central view</small>
+        </header>
+        <div class="map__canvas">
+          <div class="map__glow"></div>
+          <p>Static city overview</p>
+        </div>
+      </section>
+
+      <section class="panel analytics">
+        <header>
+          <span>💡 Smart Electricity</span>
+          <small>Consumption mix</small>
+        </header>
+        <div class="chart">
+          <div class="bar" style="--value: 42%">
+            <span>Homes</span>
+            <div class="bar__fill"></div>
+          </div>
+          <div class="bar" style="--value: 30%">
+            <span>Industries</span>
+            <div class="bar__fill"></div>
+          </div>
+          <div class="bar" style="--value: 28%">
+            <span>IT Parks</span>
+            <div class="bar__fill"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel news">
+        <header>
+          <span>📰 City News</span>
+          <small>Auto scroll</small>
+        </header>
+        <div class="news__viewport">
+          <ul class="news__list">
+            <li>Metro Purple Line extension work to Whitefield on track.</li>
+            <li>Flood warnings for low-lying areas near Outer Ring Road.</li>
+            <li>New tech park announced near Hebbal – 25,000 new jobs.</li>
+            <li>Bengaluru launches pilot smart parking in CBD.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel complaints">
+        <header>
+          <span>📮 Smart Complaint System</span>
+          <small>UI only</small>
+        </header>
+        <form class="complaint-form">
+          <label>
+            Name
+            <input type="text" placeholder="Enter your name" />
+          </label>
+          <label>
+            Location
+            <input type="text" placeholder="Area / Landmark" />
+          </label>
+          <label>
+            Type of issue
+            <select>
+              <option>Road</option>
+              <option>Water</option>
+              <option>Electricity</option>
+              <option>Public transport</option>
+            </select>
+          </label>
+          <button type="button">Submit complaint</button>
+        </form>
+      </section>
+
+      <section class="panel events">
+        <header>
+          <span>🥇 Events & Highlights</span>
+          <small>City spotlight</small>
+        </header>
+        <ul>
+          <li>
+            <strong>Tech Summit 2025</strong>
+            <p>Showcasing Bengaluru’s AI and sustainability projects.</p>
+          </li>
+          <li>
+            <strong>Bengaluru Marathon</strong>
+            <p>Green mobility drive across Metro corridors.</p>
+          </li>
+          <li>
+            <strong>Metro Expansion</strong>
+            <p>Phase 3 underground tunnelling begins near Hebbal.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+      <footer>
+        Bengaluru Smart City Mission · Command Center · 2025
+      </footer>
+    </div>
+  </body>
+</html>
+
